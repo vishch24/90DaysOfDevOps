@@ -1,4 +1,4 @@
-# Day 1 of 90DaysOfDevOps:
+# Day 1 - Introduction to DevOps. Cloud, SRE
 
 ## What is DevOps?
 - DevOps is a software development methodology which bridges the gap between development and operations with culture and mindset.
