@@ -29,6 +29,24 @@
 - It ensures services start, stop, and restart properly. If a service crashes, `systemd` autmatically detect and restarts it so the applications run smoothly.
 - It uses the command-line tool `systemctl` to control the background processes, system resources including the overall state of the operating system on modern distributions like Ubuntu, Fedora and CentOS, etc.
 
+### For Example: `How your laptop starts?`
+
+<div align="center">
+
+`POWER ON` \
+⬇️ \
+`MOTHERBOARD - (BIOS) BASIC INPUT OUTPUT SYSTEM [BIOS AKA FIRMWARE]` \
+⬇️ \
+`BOOTLOADER (lINUX KERNEL KA CODE KAHA RAKHA HAI)` \
+⬇️ \
+`KERNEL (STARTS A PROCESS)` \
+⬇️ \
+`SYSTEMD (PID) PROCESS ID 1` \
+⬇️ \
+`DOCKER/KUBERNETES/SSH/NGINX/PRINTER/SCANNER`
+
+</div>
+
 ---
 
 ## File System Hierarchy:
