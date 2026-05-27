@@ -58,25 +58,11 @@
 ---
 
 ## Shell commands for practice:
-- `mkdir vishakha`: Creates a new directory.
-- `mkdir -p demo`: Checks if the folder already exists or not. If not, it creates a new directory. 
 - `pwd`: Present Working Directory or Print Working Directory.
 - `cd`:  Change directory.
 - `ls`: List files or directory. (d = directory, l = Link)
 - `cat etc/os-release`: Linux distribution and version.
-- `touch hello.txt`: Creates a new file.
-- `cat hello.txt`: Displays content from the file. 
-- `echo`: Displays text on the interface.
-- `echo "Hello World" > hello.txt`: Adds the text into the file overwritting the file contents.
-- `echo "How are you?" >> hello.txt`: Appends the text into the file.
-- `df -h`: Displays disk-space in human-readable format.
-- `free -h`: Displays total amount of free and RAM in human-readable format.
-- `vim hello.txt`: Opens a text editor within the CLI to edit the file.
-  - Type `i` to insert.
-  - Click `ESC` button to get out fo the edit mode.
-  - Then `:wq` to save the file and quit. (To quit the editor without saving any changes, use `:q!` in vim editor)
-- `head hello.txt -n 3`:  Displays first 3 lines of the file. (`head` displays first 'n' number of lines irrespective of number mentioned.)
-- `tail hello.txt -n 3`:  Displays last 3 lines of the file. (`tail` displays last 'n' number of lines irrespective of number mentioned.)
+- `echo`: Displays text on the interface.  
 
 ---
 
