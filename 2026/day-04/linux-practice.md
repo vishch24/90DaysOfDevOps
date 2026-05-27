@@ -38,16 +38,4 @@
 - Step 2: `ps -u vishakha` to check a vishakha's processes.
 - Step 3: `systemctl list-unit-files --type=service` to list all the installed services.
 - Step 4: `journalctl -u cron` to filter logs for cron service.
-
-
-
-
-
-
-
-
-
-
-
-
-
+- Step 5: `kill -9 365` to kill a process. 
