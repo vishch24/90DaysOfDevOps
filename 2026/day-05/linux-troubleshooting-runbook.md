@@ -1,4 +1,4 @@
-# Day 05 – Linux Troubleshooting Drill: CPU, Memory, and Logs
+# Day 05 – Linux Troubleshooting Drill: CPU, Memory, and Logs (Environment: KillerCoda Ubuntu 24.04 playground)
 
 ## Target service / process
 - `systemctl list-units --type=service --state=running`: Filters and lists down the real-time service units which are currently running in your Linux system.
