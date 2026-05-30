@@ -44,7 +44,7 @@ lrwxrwxrwx 1 root root 1 May 16 19:59 filesystem -> /
 ```
 I would use this when switching user.
 
---
+---
 
 - `/etc` - Configuration files
 It contains configuration file directories like `apt` for installing software packages, `passwd` for adding user's passwords while creating users, `opt` for optional software packages.
@@ -64,7 +64,7 @@ drwxr-xr-x 3 root root       4096 May 16 19:59 apache2
 ```
 I would use this when managing users, system state and booting, downloading software packages, and networking.
 
---
+---
 
 - `/var/log` - Log files (very important for DevOps!)
 It includes log files like `syslog` which help in analysing system infrastructure failures, kernel-level errors, service lifecycle changes, and hardware resource bottlenecks; `sysstat` for CPU throttling, memory leaks, disk I/O latency, and network dropouts; `journal` for OS-level debugging, daemon failures, and service orchestration, etc.
@@ -89,7 +89,7 @@ drwxr-x---  2 root      adm               4096 Feb 10  2025 unattended-upgrades
 ```
 I would use this when system troubleshooting, infrastructure monitoring, automated alerting, and security auditing.
 
---
+---
 
 - `/tmp` - Temporary files
 It contains temporary files which automatically wipes away after reboot.
@@ -105,7 +105,7 @@ drwx------ 3 root root 4096 May 30 14:27 systemd-private-a070a4eedb75412e859516c
 ```
 I would use this when storing temporary, transient files.
 
---
+---
 
 **Additional Directories (Good to Know):**
 - `/bin` - Essential command binaries
@@ -129,7 +129,7 @@ lrwxrwxrwx 1 root root         26 Dec  3 15:08  addr2line -> x86_64-linux-gnu-ad
 ```
 I would use this when running my everyday commands.
 
---
+---
 
 - `/usr/bin` - User command binaries
 It includes non-essential user command binaries (executable programs) that are managed by the distribution's package manager like, `vim` as a modern and advanced text editor; `nano` as a editor for beginners; `python` to run python scripts, etc.
@@ -153,7 +153,7 @@ lrwxrwxrwx 1 root root         25 May 13 05:57  vimdiff -> /etc/alternatives/vim
 ```
 I would use this when executing programs and text editors.
 
---
+---
 
 - `/opt` - Optional/third-party applications
 It includes optional third-party applications which are not part of the default operating system installation like `chrome`, `discord`, `spotify`, etc.
