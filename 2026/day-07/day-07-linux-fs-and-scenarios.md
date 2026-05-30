@@ -4,6 +4,7 @@
 
 **Core Directories (Must Know):**
 - `/` (root) - The starting point of everything
+
 It includes directories like `dev` for devices, `home` for users, `etc` for managing users, system state and booting, downloading software packages, and networking.
 
 After running, `ls -l /`, we get:
@@ -23,6 +24,7 @@ I would use this when I want to switch from directories.
 ---
 
 - `/home` - User home directories
+
 It includes different user's directories for example, `ubuntu`.
 
 After running, `ls -l /home/`, we get:
@@ -35,6 +37,7 @@ I would use this when creating new users and managing them.
 ---
 
 - `/root` - Root user's home directory
+
 It includes the root user's home directory which is not accessible by other users.
 
 After running, `ls -l /root/`, we get:
@@ -47,6 +50,7 @@ I would use this when switching user.
 ---
 
 - `/etc` - Configuration files
+
 It contains configuration file directories like `apt` for installing software packages, `passwd` for adding user's passwords while creating users, `opt` for optional software packages.
 
 After running, `ls -l /etc/`, we get:
@@ -67,6 +71,7 @@ I would use this when managing users, system state and booting, downloading soft
 ---
 
 - `/var/log` - Log files (very important for DevOps!)
+
 It includes log files like `syslog` which help in analysing system infrastructure failures, kernel-level errors, service lifecycle changes, and hardware resource bottlenecks; `sysstat` for CPU throttling, memory leaks, disk I/O latency, and network dropouts; `journal` for OS-level debugging, daemon failures, and service orchestration, etc.
 
 After running, `ls -l /var/log/`, we get:
@@ -92,6 +97,7 @@ I would use this when system troubleshooting, infrastructure monitoring, automat
 ---
 
 - `/tmp` - Temporary files
+
 It contains temporary files which automatically wipes away after reboot.
 
 After running, `ls -l /tmp/`, we get:
@@ -108,7 +114,9 @@ I would use this when storing temporary, transient files.
 ---
 
 **Additional Directories (Good to Know):**
+
 - `/bin` - Essential command binaries
+
 It includes command binaries which are everyday system tools to execute like, `mkdir` to create a new directory, `cp` to copy files and directories, `ls` to list files or directories, `cat` to concatenate and display file content.
 
 After running, `ls -l /bin/`, we get:
@@ -132,6 +140,7 @@ I would use this when running my everyday commands.
 ---
 
 - `/usr/bin` - User command binaries
+
 It includes non-essential user command binaries (executable programs) that are managed by the distribution's package manager like, `vim` as a modern and advanced text editor; `nano` as a editor for beginners; `python` to run python scripts, etc.
 
 After running, `ls -l /usr/bin/`, we get:
@@ -156,6 +165,7 @@ I would use this when executing programs and text editors.
 ---
 
 - `/opt` - Optional/third-party applications
+
 It includes optional third-party applications which are not part of the default operating system installation like `chrome`, `discord`, `spotify`, etc.
 
 After running, `ls -l /opt/`, we get:
