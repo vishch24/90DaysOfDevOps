@@ -274,17 +274,17 @@ journalctl -u docker
 ```
 **Why this command?** It shows log file for docker service.
 
-**Step 3:** Check docker service status using `-1` and `-n` flags
+**Step 3:** Check docker service status by units and number of lines
 ```bash
 journalctl -u docker -n 50
 ```
-**Why this command?** It uses `-u` and `-n` flags to show 
+**Why this command?** It uses flags like `-u` to filter the system logs and show entries only for a specific systemd unit and `-n` to limit number of lines to show the system logs generated specifically by the Docker background service.
 
-**Step 4:** 
+**Step 4:** Check docker service status by units and follow logs in real-time
 ```bash
 journalctl -u docker -f
 ```
-**Why this command?** 
+**Why this command?** It uses flags like `-u` and `-f` flags to show 
 
 **Step 5:** 
 ```bash
