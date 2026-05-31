@@ -179,3 +179,168 @@ drwxr-xr-x 8 root root 4096 May 16 19:30 theia
 ...
 ```
 I would use this when installing third-party applications whenever needed.
+
+---
+
+## Part 2: Scenario-Based Practice
+
+### Scenario 1: Service Not Starting
+
+```
+A web application service called 'myapp' failed to start after a server reboot.
+What commands would you run to diagnose the issue?
+Write at least 4 commands in order.
+```
+
+**My Solution (Step by step):**
+
+**Step 1:** Check service status
+```bash
+systemctl status myapp
+```
+**Why this command?** It shows if the service is active, failed, or stopped
+
+**Step 2:** Check service is enabled
+```bash
+systemctl is-enabled myapp
+```
+**Why this command?** To check if the service is enabled.
+
+**Step 3:** Check systemd-journald logs
+```bash
+journalctl -u myapp -n 50
+```
+**Why this command?** It shows if some errors or warning occurred in the log file of the service.
+
+**Step 4:** Restart the service
+```bash
+systemctl restart myapp
+```
+**Why this command?** After solving the error, it will restart the service.
+**What I learned**: Always check status first, then investigate based on what you see.
+
+---
+
+### Scenario 2: High CPU Usage
+
+```
+Your manager reports that the application server is slow.
+You SSH into the server. What commands would you run to identify
+which process is using high CPU?
+```
+
+**My Solution (Step by step):**
+
+**Step 1:** Check CPU usage with `top`
+```bash
+top 
+```
+**Why this command?** It shows all running processes in real time. 
+
+**Step 2:** Check CPU usage with `htop`
+```bash
+htop
+```
+**Why this command?** Same as `top` but, with better visuals to check CPU usage.
+
+**Step 3:** Check CPU usage with `ps`
+```bash
+ps aux --sort=-%cpu | head -10
+```
+**Why this command?** It shows top 10 CPU-consuming processes at that exact moment sorted by CPU usage, not real-time.
+**What I learned**: If CPU is overloaded, it can slow down the system.
+
+---
+
+### Scenario 3: 
+
+```
+A developer asks: "Where are the logs for the 'docker' service?"
+The service is managed by systemd.
+What commands would you use?
+```
+
+**My Solution (Step by step):**
+
+**Step 1:** Check docker service status
+```bash
+systemctl status docker
+```
+**Why this command?** It shows if the docker service is active, failed, or enabled.
+
+**Step 2:** Check docker service through systemd-journald
+```bash
+journalctl -u docker
+```
+**Why this command?** It shows log file for docker service.
+
+**Step 3:** Check docker service status using `-1` and `-n` flags
+```bash
+journalctl -u docker -n 50
+```
+**Why this command?** It uses `-u` and `-n` flags to show 
+
+**Step 4:** 
+```bash
+journalctl -u docker -f
+```
+**Why this command?** 
+
+**Step 5:** 
+```bash
+
+```
+**Why this command?** 
+**What I learned**: 
+
+---
+
+### Scenario 4: 
+
+```
+
+```
+
+**My Solution (Step by step):**
+
+**Step 1:** 
+```bash
+
+```
+**Why this command?** 
+
+**Step 2:** 
+```bash
+
+```
+**Why this command?** 
+
+**Step 3:** 
+```bash
+
+```
+**Why this command?** 
+
+**Step 4:** 
+```bash
+
+```
+**Why this command?** 
+**What I learned**: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
