@@ -217,6 +217,7 @@ journalctl -u myapp -n 50
 systemctl restart myapp
 ```
 **Why this command?** After solving the error, it will restart the service.
+
 **What I learned**: Always check status first, then investigate based on what you see.
 
 ---
@@ -248,6 +249,7 @@ htop
 ps aux --sort=-%cpu | head -10
 ```
 **Why this command?** It shows top 10 CPU-consuming processes at that exact moment sorted by CPU usage, not real-time.
+
 **What I learned**: If CPU is overloaded, it can slow down the system.
 
 ---
@@ -285,6 +287,7 @@ journalctl -u docker -n 50
 journalctl -u docker -f
 ```
 **Why this command?** It uses flags like `-u` to limit number of lines and `-f` to follow logs in real-time to show logs.
+
 **What I learned**: Background processes matter. You never know which service is taking the most load.
 
 ---
@@ -324,4 +327,5 @@ ls -l /home/user/backup.sh
 ./backup.sh
 ```
 **Why this command?** To check if the file is executable.
+
 **What I learned**: Sometimes file permissions can make a big difference.
