@@ -284,63 +284,44 @@ journalctl -u docker -n 50
 ```bash
 journalctl -u docker -f
 ```
-**Why this command?** It uses flags like `-u` and `-f` flags to show 
-
-**Step 5:** 
-```bash
-
-```
-**Why this command?** 
-**What I learned**: 
+**Why this command?** It uses flags like `-u` to limit number of lines and `-f` to follow logs in real-time to show logs.
+**What I learned**: Background processes matter. You never know which service is taking the most load.
 
 ---
 
 ### Scenario 4: 
 
 ```
+A script at /home/user/backup.sh is not executing.
+When you run it: ./backup.sh
+You get: "Permission denied"
 
+What commands would you use to fix this?
 ```
 
 **My Solution (Step by step):**
 
-**Step 1:** 
+**Step 1:** Check current permissions
 ```bash
-
+ls -l /home/user/backup.sh
 ```
-**Why this command?** 
+**Why this command?** -rw-r--r-- (noticed no 'x' = not executable).
 
-**Step 2:** 
+**Step 2:** Add execute permission
 ```bash
-
+chmod +x /home/user/backup.sh
 ```
-**Why this command?** 
+**Why this command?** To make the file executable.
 
-**Step 3:** 
+**Step 3:** Verify it worked
 ```bash
-
+ls -l /home/user/backup.sh
 ```
-**Why this command?** 
+**Why this command?** -rwxr-xr-x (noticed 'x' = executable).
 
-**Step 4:** 
+**Step 4:** Try running it
 ```bash
-
+./backup.sh
 ```
-**Why this command?** 
-**What I learned**: 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+**Why this command?** To check if the file is executable.
+**What I learned**: Sometimes file permissions can make a big difference.
