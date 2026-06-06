@@ -28,7 +28,7 @@ Run `sudo apt-get update` to update the system.
 
 ### Step 3: Install Nginx
 
-Run `sudo apt-get install nginx` to install nginx.
+Run `sudo apt-get install nginx` to install nginx and `sudo apt-get install docker.io` to install docker.
 
 ### Verify Nginx is running:
 
@@ -103,11 +103,16 @@ Replace:
 
 ## Commands Used
 
-[List the key commands you used]
+- `sudo apt-get update`
+- `sudo apt-get install nginx`
+- `sudo cat /var/log/nginx/access.log`
+- `sudo cat /var/log/nginx/access.log > ~/nginx-logs.txt`
+- `cat ~/nginx-logs.txt`
+- `scp -i your-key.pem ubuntu@<your-instance-ip>:~/nginx-logs.txt .`
 
 ## Challenges Faced
 
-[Describe any issues and how you solved them]
+
 
 ## What I Learned
 
