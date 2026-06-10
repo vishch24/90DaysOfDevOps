@@ -103,17 +103,24 @@ Replace:
 
 ## Commands Used
 
-- `sudo apt-get update`
-- `sudo apt-get install nginx`
-- `sudo cat /var/log/nginx/access.log`
-- `sudo cat /var/log/nginx/access.log > ~/nginx-logs.txt`
-- `cat ~/nginx-logs.txt`
-- `scp -i your-key.pem ubuntu@<your-instance-ip>:~/nginx-logs.txt .`
+- `sudo apt-get update`:- Update the system before anything else.
+- `sudo apt-get install nginx`:- Install nginx.
+- `sudo cat /var/log/nginx/access.log`:- View access logs for nginx.
+- `sudo cat /var/log/nginx/access.log > ~/nginx-logs.txt`:- Save the copy of 'access.log' to a new file 'nginx-logs.txt'.
+- `cat ~/nginx-logs.txt`:- View the file if it's saved.
+- `scp -i your-key.pem ubuntu@<your-instance-ip>:~/nginx-logs.txt .` Download the new created log file to local system.
 
 ## Challenges Faced
 
-
+| Problems | Solutions |
+| --- | --- |
+| During running the ssh connection of AWS instance to local, got an error of permission denied. | Solved it by using `chmod 400 "cloud-server-key.pem"` by changing the permission of the file. |
+| While, accessing the nginx page, the page didn't load | Solved it by changing type to 'http' which automatically selects port 80 and keeping the source type to 'My IP' only an AWS. |
 
 ## What I Learned
 
-[3-5 bullet points of key learnings]
+- Nginx works on port 80 pnly.
+- SSH is the important part of TCP/IP.
+- File permissions matter during establishing connections.
+- You need to update system before installing any service.
+- Logs are important part of DevOps and should never be ignored.
