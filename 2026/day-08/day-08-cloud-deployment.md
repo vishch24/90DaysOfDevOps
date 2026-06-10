@@ -115,7 +115,7 @@ Replace:
 | Problems | Solutions |
 | --- | --- |
 | During running the ssh connection of AWS instance to local, got an error of permission denied. | Solved it by using `chmod 400 "cloud-server-key.pem"` by changing the permission of the file. |
-| While, accessing the nginx page, the page didn't load | Solved it by changing type to 'http' which automatically selects port 80 and keeping the source type to 'My IP' only an AWS. |
+| While, accessing the nginx page, the page didn't load | Solved it by changing type to 'http' which automatically selects port 80 and keeping the source type to 'My IP' only, on AWS. |
 
 ## What I Learned
 
