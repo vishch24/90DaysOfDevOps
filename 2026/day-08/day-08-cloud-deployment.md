@@ -119,7 +119,7 @@ Replace:
 
 ## What I Learned
 
-- Nginx works on port 80 pnly.
+- Nginx works only on port 80.
 - SSH is the important part of TCP/IP.
 - File permissions matter during establishing connections.
 - You need to update system before installing any service.
