@@ -74,7 +74,7 @@ sudo mkdir -p /opt/webproject/logs
 ### Step 3 — Create some files
 ```bash
 sudo touch /opt/webproject/config/app.conf
-cat > /opt/webproject/logs/deploy.log
+sudo touch /opt/webproject/logs/deploy.log
 ```
 Write a deploy script:
 ```bash
