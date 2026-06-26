@@ -1,0 +1,22 @@
+# Fields: Timestamp | Log Level | Component | Event ID | Message
+2026-06-26 08:00:01 [INFO] [SYSTEM_BOOT] [EVT-101] Kernel initialized successfully on host node-01.
+2026-06-26 08:00:03 [INFO] [NETWORK] [EVT-102] Network interface eth0 up, assigned IP 10.0.0.15.
+2026-06-26 08:00:05 [INFO] [DATABASE] [EVT-201] PostgreSQL 16 database cluster started and accepting connections.
+2026-06-26 08:00:10 [INFO] [APP_SERVER] [EVT-301] Web Application Server v4.2 container started on port 8080.
+2026-06-26 08:15:22 [INFO] [AUTH] [EVT-401] User login successful. Username: jsmith, IP: 192.168.1.50.
+2026-06-26 08:16:05 [INFO] [API_GATEWAY] [EVT-501] GET /api/v1/products - Status 200 - Response time: 45ms.
+2026-06-26 08:30:12 [WARN] [RESOURCE_MONITOR] [EVT-601] CPU utilization exceeded threshold. Current: 88%.
+2026-06-26 08:45:00 [INFO] [CRON_JOB] [EVT-701] Scheduled daily database backup initiated.
+2026-06-26 08:45:30 [INFO] [DATABASE] [EVT-202] Backup completed successfully. Exported to s3://backups/db_snap.bak.
+2026-06-26 09:12:14 [WARN] [API_GATEWAY] [EVT-502] POST /api/v1/payments - Status 400 Bad Request - Invalid payload.
+2026-06-26 10:05:41 [WARN] [AUTH] [EVT-402] Failed password login attempt for user: admin from IP: 203.0.113.5.
+2026-06-26 10:05:43 [WARN] [AUTH] [EVT-402] Failed password login attempt for user: admin from IP: 203.0.113.5. 
+2026-06-26 10:05:45 [ALERT] [SECURITY] [EVT-901] Brute-force attack detected! Account 'admin' locked. Source IP: 203.0.113.5.
+2026-06-26 11:20:18 [ERROR] [DATABASE] [EVT-203] Connection pool exhausted. Maximum 100 connections reached.
+2026-06-26 11:20:19 [ERROR] [APP_SERVER] [EVT-302] Internal Server Error: Could not acquire database connection lease.
+2026-06-26 11:20:20 [CRITICAL] [API_GATEWAY] [EVT-503] GET /api/v1/checkout - Status 500 Internal Server Error.
+2026-06-26 11:22:00 [INFO] [DATABASE] [EVT-204] Database connection pool recycled. Health checks returning normal.
+2026-06-26 13:00:00 [INFO] [DEPLOYMENT] [EVT-801] Triggering rolling update for microservice 'billing-service'.
+2026-06-26 13:02:15 [DEBUG] [DEPLOYMENT] [EVT-802] Pulling image ://docker.com.
+2026-06-26 23:55:00 [INFO] [SYSTEM_SHUTDOWN] [EVT-103] Received SIGTERM signal. Initiating graceful shutdown sequence.
+2026-06-26 23:55:05 [INFO] [SYSTEM_SHUTDOWN] [EVT-104] All processes terminated. System halted.
