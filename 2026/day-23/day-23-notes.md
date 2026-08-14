@@ -21,3 +21,8 @@ How it works?
 
 - Your project files update to match the saved state of the target branch.
 - Files unique to the new branch appear, files exclusive to your old branch disappear, and shared files update to their recorded versions.
+
+### What is the difference between `origin` and `upstream`?
+
+- `origin` is the default name for your own remote repository (usually your personal fork or the main repo you cloned).
+- `upstream` is the name usually given to the main, original project repository when you fork someone else's project, letting you pull fresh updates from them.
