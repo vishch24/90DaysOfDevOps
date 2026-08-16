@@ -100,6 +100,47 @@ Understanding the Marks
 | For a straight line | To keep a record |
 | Avoid shared network; rewrites history | To avoid trouble of rewriting history |
 
+---
+
+# Understanding Squash Commit vs Merge Commit
+
+## What does squash merging do?
+
+- A squash merge combines all the individual code changes from a feature branch into a single, giant commit before adding them to the main branch. Instead of keeping a messy history of every little save, it turns them into one clean update.
+
+How It Works?
+
+- **Normal Merge**: Keeps every single save point and makes a complex web of history.
+- **Squash Merge**: Packs all work into one neat package and adds it as a straight line on the main timeline.
+
+Pros and Cons
+
+- **Pros**: Keeps the main project history very clean, readable, and easy to look back on.
+- **Cons**: You lose the step-by-step story of how the feature was built day-by-day.
+
+## When would you use squash merge vs regular merge?
+
+- Use a **regular merge** to keep all history and every small step.
+- Use a **squash merge** to turn a messy branch into one clean update on the main line.
+
+| Regular Merge | Squash Merge |
+| :--- | :--- |
+| Keeps every single commit from your feature branch. | Combines all your commits into one big commit. |
+| Shows the full story of your work over time. | Makes the main history neat and easy to read. |
+| Best for long teams where people need to see every change. | Hides small fix-up commits like "typo fix" or "oops." |
+| Can make the main history very busy and hard to read. | Best for solo work or small features that do not need a long history. |
+
+## What is the trade-off of squashing?
+
+- Squashing in git means combining many small code changes into one big change. The main trade-off is that it makes the main project history clean and easy to read, but you lose the step-by-step record of how the work was done.
+
+| Pros | Cons |
+| :--- | :--- |
+| Keeps the project history neat. | You cannot see how the code grew step by step. |
+| Makes it easy to undo a whole feature at once. | It is harder to find the exact moment a bug was added. |
+| Removes messy notes like "typo fix" or "testing code" from the main list. | Team members lose the details of past discussions in the small commits. |
+
+
 
 
 
