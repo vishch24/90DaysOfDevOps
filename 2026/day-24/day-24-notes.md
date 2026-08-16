@@ -140,10 +140,30 @@ Pros and Cons
 | Makes it easy to undo a whole feature at once. | It is harder to find the exact moment a bug was added. |
 | Removes messy notes like "typo fix" or "testing code" from the main list. | Team members lose the details of past discussions in the small commits. |
 
+---
 
+# Understanding Git Stash
 
+## What is the difference between `git stash pop` and `git stash apply`?
 
+- `git stash pop` applies your saved changes and deletes them from your hidden stash list.
+- `git stash apply` copies your saved changes into your workspace but keeps them in your stash list.
 
+| Features | `git stash apply` | `git stash pop` |
+| :--- | :--- | :--- |
+| **What it does** | Restores your files. | Restores your files. |
+| **Stash History** | Keeps the stash in the list. | Deletes the stash from the list. |
+| **Safety** | High. Safe to test on multiple branches. | Medium. Cleans up your list automatically. |
+| **If there is a conflict** | Files change; stash stays in list. | Files change; stash is not deleted. |
 
+## When would you use stash in a real-world workflow?
+
+- You use `git stash` when you work on code, get an urgent request to fix a different bug, and need to clean your workspace fast. It saves your current unfinished work in a safe hidden spot. This lets you switch branches, fix the urgent issue, and come back later to finish your first task.
+
+Common Real-World Scenarios
+
+- Sudden Bug Fixes: Stash your feature code during urgent debugging.
+- Wrong Branch Mistakes: If accidentally code on the `main` branch, stash your code, switch branches and then pop the changes back out.
+- Pulling Fresh Updates: While trying to pull new team code, local changes block the updates. In such cases, stash your code, pull the updates smoothly and then re-apply the changes.
 
 
