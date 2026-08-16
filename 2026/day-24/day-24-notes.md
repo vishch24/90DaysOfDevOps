@@ -61,3 +61,48 @@ Understanding the Marks
 1. `<<<<<<< HEAD`: Shows the start of your current local changes.
 2. `=======`: Acts as the dividing line between your changes and the other branch.
 3. `>>>>>>> <branch-name>`: Shows the end of the conflict and the incoming code from the other branch.
+
+---
+
+# Understanding Git Rebase
+
+## What does rebase actually do to your commits?
+
+- Git rebase takes your saved work (commits) off your branch, cuts the branch from its old spot, and pastes it onto the very top of a new base branch.
+- Crucially, it deletes your old commits and makes brand-new copies with new ID numbers so your project history looks like one straight, clean line.
+- **NOTE**: Rewrites history: Because it makes new copies of your commits, it changes the past IDs. Never rebase code that you already shared with other people on a public branch, or it will break everyone else's work.
+
+## How is the history different from a merge?
+
+- A history shows every single step of work you did.
+- A merge combines two different sets of work into one. A history keeps a clear timeline of all changes. A merge joins separate paths together.
+
+| History | Merge |
+| :--- | :--- |
+| Shows every commit or save. | Takes two branches of work. |
+| Keeps a straight line of changes. | Links them together. |
+| Lets you see who made each edit. | Creates a new combined point. |
+| Does not hide old work. | Keeps both past paths visible. |
+
+## Why should you never rebase commits that have been pushed and shared with others?
+
+- Never rebase shared commits because `git rebase` secretly deletes old work and replaces it with brand-new copies.
+- This rewrites history. If your teammates already saved the old copies, their computers will get confused, and mixing your work together will break.
+
+## When would you use rebase vs merge?
+
+- Use `merge` when you want to safely combine code and keep a true history of when branches met.
+- Use `rebase` when you want to clean up your personal work history and make the project timeline look like a straight, neat line before sharing it.
+
+| `rebase` | `merge` |
+| :--- | :--- |
+| For local cleanup | For shared work |
+| For a straight line | To keep a record |
+| Avoid shared network; rewrites history | To avoid trouble of rewriting history |
+
+
+
+
+
+
+
