@@ -166,4 +166,23 @@ Common Real-World Scenarios
 - Wrong Branch Mistakes: If accidentally code on the `main` branch, stash your code, switch branches and then pop the changes back out.
 - Pulling Fresh Updates: While trying to pull new team code, local changes block the updates. In such cases, stash your code, pull the updates smoothly and then re-apply the changes.
 
+---
 
+# Understanding Cherry Picking
+
+## What does cherry-pick do?
+
+- *cherry-picking* means taking one specific change (called a commit) from one working area or branch and copying it directly onto a completely different branch.
+- Instead of merging or copying everything, you grab only the exact fix or feature you want.
+
+## When would you use `cherry-pick` in a real project?
+
+- Use `git cherry-pick` when you want to copy one specific commit from one branch and paste it into another branch.
+- Use this to fix a bug in production quickly or share a helpful fix without merging a whole messy branch.
+
+## What can go wrong with cherry-picking?
+
+- **Code Conflicts**: Git tries to force your chosen commit into the new branch. If the old code does not match the new code, Git stops and asks you to fix the lines manually.
+- **Duplicate Commits**: If you cherry-pick a commit and later merge the whole branch, Git might get confused and add the same changes twice. This creates messy history.
+- **Lost History Links**: Cherry-picking makes a brand-new commit with a new ID. It breaks the clean link back to the original branch and author timeline.
+- **Untested Bugs**: The code might work on the old branch, but it can break things on the new branch because the surrounding files are different.
