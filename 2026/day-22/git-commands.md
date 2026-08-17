@@ -69,6 +69,69 @@ git commit -m "<meaning-message-to-understand-the-changes>"
 
 *Example*: `git commit -m "First file of introduction added."`
 
+4. Check git status before committing.
+
+```bash
+git status
+```
+*What it does*: It shows the state of your working directory and staging area.
+
+*Example*: `git status`
+
+5. Display commit history in a detailed format.
+
+```bash
+git log
+```
+*What it does*: It is a utility tool used to view the detailed history of commits in a Git repository in reverse chronological order.
+
+*Example*: `git log`
+
+6. Display commit history in oneline also known as compact format.
+
+```bash
+git log --oneline
+```
+*What it does*: It is a shorthand option that condenses your Git commit history into a compact, single-line format per commit.
+
+*Example*: `git log --oneline`
+
+7. Visualize entire commit history in a compact and text-based tree graph.
+
+```bash
+git log --oneline --graph --all
+```
+*What it does*: It is used to visualize the entire commit history of a repository as a compact, text-based tree graph directly inside your terminal.
+
+*Example*: `git log --oneline --graph --all`
+
+8. Compare code changes (unstaged)
+
+```bash
+git diff
+```
+*What it does*: It is used to compare and display code changes between different states of your repository.
+
+*Example*: `git diff`
+
+9. Compare code changes (staged)
+
+```bash
+git diff --staged
+```
+*What it does*: It shows the exact code changes you have added to your staging area (`git add`) compared against your last commit (`HEAD`).
+
+*Example*: `git diff --staged`
+
+10. Display complete records of Git from local machine.
+
+```bash
+git reflog
+```
+*What it does*: It is your local safety net and "undo button" in Git. It records a private, chronological diary of every single time your `HEAD` pointer moves. It tracks commits, checkouts, merges, rebases, and hard resets.
+
+*Example*: `git reflog`
+
 ---
 
 ## Branching
@@ -160,7 +223,25 @@ git push -u origin <branch-name>
 
 *Example*: `git push -u origin master`
 
-5. Clone a public repository from GitHub.
+5. Pull code.
+
+```bash
+git pull origin <branch-name>
+```
+*What it does*: It downloads changes from a remote repository and immediately integrates them into your current local branch.
+
+*Example*: `git pull origin master`
+
+6. Fetch code. 
+
+```bash
+git fetch origin <branch-name>
+```
+*What it does*: It downloads commits, files, and references from a remote repository into your local repository without merging them into your working code.
+
+*Example*: `git fetch origin master`
+
+7. Clone a public repository from GitHub.
 
 ```bash
 git clone https://github.com/<github-username>/<repository-name>.git
@@ -169,7 +250,7 @@ git clone https://github.com/<github-username>/<repository-name>.git
 
 *Example*: `git clone https://github.com/rtyley/small-test-repo.git`
 
-6. Setting up remote upstream
+8. Setting up remote upstream
 
 ```bash
 git remote add upstream https://github.com/<github-username>/<repository-name>.git
@@ -305,40 +386,40 @@ git cherry-pick --continue
 
 ---
 
-## Viewing Changes
+## Reset & Revert
 
-1. Display commit history in a detailed format.
-
-```bash
-git log
-```
-*What it does*: It is a utility tool used to view the detailed history of commits in a Git repository in reverse chronological order.
-
-*Example*: `git log`
-
-2. Display commit history in oneline also known as compact format.
+1. Undo last commit and keep all changes staged.
 
 ```bash
-git log --oneline
+git reset --soft HEAD~1
 ```
-*What it does*: It is a shorthand option that condenses your Git commit history into a compact, single-line format per commit.
+*What it does*: It undoes your very last commit while keeping all your modified files intact and staged.
 
-*Example*: `git log --oneline`
+*Example*: `git reset --soft HEAD~1`
 
-3. Check git status before committing.
+2. Undo last commit and unstage its changes.
 
 ```bash
-git status
+git reset --mixed HEAD~1
 ```
-*What it does*: It shows the state of your working directory and staging area.
+*What it does*: It undoes your very last commit and unstages all of its changes, but leaves your actual code completely safe in your working directory.
 
-*Example*: `git status`
+*Example*: `git reset --mixed HEAD~1`
 
-4. Visualize entire commit history in a compact and text-based tree graph.
+3. Delete last commit, history and files.
 
 ```bash
-git log --oneline --graph --all
+git reset --hard HEAD~1
 ```
-*What it does*: It is used to visualize the entire commit history of a repository as a compact, text-based tree graph directly inside your terminal.
+*What it does*: It permanently deletes your last commit, throws away all staged changes, and wipes out all uncommitted local work.
 
-*Example*: `git log --oneline --graph --all`
+*Example*: `git reset --hard HEAD~1`
+
+4. Restore a commit.
+
+```bash
+git revert <commit-id>
+```
+*What it does*: It safely undoes the changes of a specific past commit by creating an entirely new commit with the exact opposite (inverted) changes.
+
+*Example*: `git revert a451s2f`
