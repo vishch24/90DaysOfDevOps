@@ -69,7 +69,11 @@ git commit -m "<meaning-message-to-understand-the-changes>"
 
 *Example*: `git commit -m "First file of introduction added."`
 
-4. Create a new branch.
+---
+
+## Branching
+
+1. Create a new branch.
 
 ```bash
 git branch <branch-name>
@@ -78,7 +82,7 @@ git branch <branch-name>
 
 *Example*: `git branch feature-1`
 
-5. Switch to the new branch created.
+2. Switch to the new branch created.
 
 ```bash
 git checkout <branch-name>
@@ -89,7 +93,7 @@ git switch <branch-name>
 
 *Example*: `git checkout feature-1`
 
-6. Check the current branch.
+3. Check the current branch.
 
 ```bash
 git branch
@@ -98,7 +102,7 @@ git branch
 
 *Example*: `git branch`
 
-7. Create a new branch and switch into it.
+4. Create a new branch and switch into it.
 
 ```bash
 git checkout -b <branch-name>
@@ -107,7 +111,7 @@ git checkout -b <branch-name>
 
 *Example*: `git checkout -b feature-2`
 
-8. Delete a branch.
+5. Delete a branch.
 
 ```bash
 git branch -d <branch-name>
@@ -116,7 +120,11 @@ git branch -d <branch-name>
 
 *Example*: `git branch -d feature-2`
 
-9. Add to remote.
+---
+
+## Remote
+
+1. Add to remote.
 
 ```bash
 git remote add origin git@github.com:<username>/<github-repository-name>.git
@@ -125,7 +133,7 @@ git remote add origin git@github.com:<username>/<github-repository-name>.git
 
 *Example*: `git remote add origin git@github.com:vishch24/git-practice.git`
 
-10. Set URL of an existing remote Git repository.
+2. Set URL of an existing remote Git repository.
 
 ```bash
 git remote set-url origin git@github.com:<username>/<github-repository-name>.git
@@ -134,7 +142,7 @@ git remote set-url origin git@github.com:<username>/<github-repository-name>.git
 
 *Example*: `git remote set-url origin git@github.com:vishch24/git-practice.git`
 
-11. Verify the remote git repository URL.
+3. Verify the remote git repository URL.
 
 ```bash
 git remote -v
@@ -143,7 +151,7 @@ git remote -v
 
 *Example*: `git remote -v`
 
-12. Push your code.
+4. Push your code.
 
 ```bash
 git push -u origin <branch-name>
@@ -152,7 +160,7 @@ git push -u origin <branch-name>
 
 *Example*: `git push -u origin master`
 
-13. Clone a public repository from GitHub.
+5. Clone a public repository from GitHub.
 
 ```bash
 git clone https://github.com/<github-username>/<repository-name>.git
@@ -161,7 +169,7 @@ git clone https://github.com/<github-username>/<repository-name>.git
 
 *Example*: `git clone https://github.com/rtyley/small-test-repo.git`
 
-14. Setting up remote upstream
+6. Setting up remote upstream
 
 ```bash
 git remote add upstream https://github.com/<github-username>/<repository-name>.git
@@ -169,6 +177,131 @@ git remote add upstream https://github.com/<github-username>/<repository-name>.g
 *What it does*: It links your local repository to the original source repository you forked on platforms like GitHub or GitLab. This allows you to pull down changes made by other contributors into your local codebase to keep your fork up-to-date.
 
 *Example*: `git remote add upstream https://github.com/rtyley/small-test-repo.git`
+
+---
+
+## Merging & Rebasing
+
+1. Merge two branches.
+
+```bash
+git merge <branch-name>
+```
+*What it does*: It combines changes from one Git branch into your currently active branch.
+
+*Example*: `git merge feature-login`
+
+2. Rebase a set of commits into a linear-line.
+
+```bash
+git rebase <branch-name>
+```
+*What it does*: It rewrites commit history by taking all the commits from your current branch and reapplying them on top of another base branch. It alters the commit history to create a clean, completely linear line of commits.
+
+*Example*: `git rebase master`
+
+3. Merge a set of commits into one.
+
+```bash
+git merge --squash <branch-name>
+```
+*What it does*: It combines all commits from a feature branch into a single set of changes staged on your current branch, without automatically creating a merge commit.
+
+*Example*: `git merge --squash feature-profile`
+
+---
+
+## Stash & Cherry Pick
+
+1. Save uncommitted changes.
+
+```bash
+git stash
+```
+*What it does*: It temporarily shelves (stores) uncommitted changes in your working directory so you can switch branches or work on something else without losing your current progress.
+
+*Example*: `git stash`
+
+2. Reapply stashed changes.
+
+```bash
+git stash apply
+```
+*What it does*: It reapplies previously stashed changes to your current working directory while keeping those changes saved in your stash history.
+
+*Example*: `git stash apply`
+
+3. Save uncommitted changes to stash.
+
+```bash
+git stash push -m "<commit-message>"
+```
+*What it does*: It saves your uncommitted local changes to the Git stash hierarchy and labels them with a custom descriptive message so you can easily identify them later.
+
+*Example*: `git stash push -m "Added stash"`
+
+4. Display stash changes.
+
+```bash
+git stash list
+```
+*What it does*: It used to display all the stashed changes currently stored in your repository's stash stack.
+
+*Example*: `git stash list`
+
+5. Display code changes from the stash.
+
+```bash
+git stash show -p
+```
+*What it does*: It displays the full file diff (the actual code changes) inside your stashed changes, rather than just a summary of the modified files.
+
+*Example*: `git stash show -p`
+
+6. Display stash.
+
+```bash
+git stash show
+```
+*What it does*: It lets you inspect the contents of a stash entry without applying or popping it from your stash stack.
+
+*Example*: `git stash show`
+
+7. Restore stashed changes.
+
+```bash
+git stash pop
+```
+*What it does*: It restores stashed changes to your current working directory and permanently removes them from your stash history.
+
+*Example*: `git stash pop`
+
+8. Pick a commit from another branch.
+
+```bash
+git cherry-pick <commit-id>
+```
+*What it does*: It copies the changes from an existing commit on another branch and applies them as a new commit onto your current active branch.
+
+*Example*: `git cherry-pick 39fe3d7`
+
+9. Skip the conflicting commit while cherry picking.
+
+```bash
+git cherry-pick --skip
+```
+*What it does*: It used to skip the current conflicting commit during an active, multi-commit cherry-pick sequence.
+
+*Example*: `git cherry-pick --skip`
+
+10. Continue cherry picking after solving merge conflicts.
+
+```bash
+git cherry-pick --continue
+```
+*What it does*: It resumes an in-progress cherry-pick operation after it has been paused due to merge conflicts.
+
+*Example*: `git cherry-pick --continue`
 
 ---
 
@@ -200,3 +333,12 @@ git status
 *What it does*: It shows the state of your working directory and staging area.
 
 *Example*: `git status`
+
+4. Visualize entire commit history in a compact and text-based tree graph.
+
+```bash
+git log --oneline --graph --all
+```
+*What it does*: It is used to visualize the entire commit history of a repository as a compact, text-based tree graph directly inside your terminal.
+
+*Example*: `git log --oneline --graph --all`
