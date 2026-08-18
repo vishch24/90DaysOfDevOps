@@ -7,6 +7,8 @@
   - **Personal Access Token** (PAT).
 - It also lets you pick whether you want to connect via `HTTPS` or `SSH` for your git commands.
 
+---
+
 ## How could you use `gh issue` in a script or automation?
 
 It can be used in a script to automate tasks like creating bug reports from tests, closing fixed issues, or finding tasks to work on. It lets your terminal or a server do the clicking and typing for you by sending commands straight to GitHub.
@@ -16,6 +18,8 @@ It can be used in a script to automate tasks like creating bug reports from test
 - **Make new tasks**: Send a quick command when a script fails to log an error as a new issue.
 - **Find and read lists**: Pull a list of open tasks to see what work is left to do.
 - **Close old tasks**: Mark an issue as done when a fix is ready and merged.
+
+---
 
 ## What merge methods does `gh pr merge` support?
 
@@ -31,6 +35,8 @@ It can be used in a script to automate tasks like creating bug reports from test
    - **What it does**: Moves your branch commits directly onto the tip of the main branch without creating a extra merge commit.
    - **Simple use**: Makes the history look like a straight, single line of changes as if you wrote everything directly on the main branch.
 
+---
+
 ## How would you review someone else's PR using `gh`?
 
 **Steps to Review a Pull Request**
@@ -41,6 +47,8 @@ It can be used in a script to automate tasks like creating bug reports from test
 - Test the new features or fixes.
 - Type `git diff` to see what lines of code changed.
 - Submit your feedback using `gh pr review <pr-number> --approve`, `--comment`, or `--request-changes`.
+
+---
 
 ## How could `gh run` and `gh workflow` be useful in a CI/CD pipeline?
 
