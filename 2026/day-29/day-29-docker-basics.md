@@ -50,3 +50,65 @@ Docker is an open-source platform that uses operating system-level virtualizatio
 
 ---
 
+# Install Docker
+
+1. Install Docker on your machine (or use a cloud instance)
+```bash
+sudo apt update && sudo apt install docker.io
+```
+Updates the system and installs docker.
+
+2. Verify the installation
+```bash
+docker --version
+```
+
+3. Run the `hello-world` container
+```bash
+docker run hello-world
+```
+When, we run this command, docker first check the image `hello-world` locally. If not found, it displays the message as 'Unable to pull locally' and pulls the latest image from the public library, downloads and installs it. Then, we can see 'Hello from Docker!' message.
+
+---
+
+# Run Real Containers
+
+1. Run an **Nginx** container and access it in your browser
+```bash
+docker run -d -p 8080:80 --name my-nginx-server nginx
+```
+`-d`: Runs the container in **detached mode** (in the background), keeping your terminal free.
+
+`-p 8080:80`: Maps port **8080** on your **host machine** to port **80** inside the **container**.
+
+`--name my-nginx-server`: Assigns the custom name `my-nginx-server` to the container so you don't have to reference it by a random ID.
+
+4. Check **logs** of a running container
+```bash
+docker logs <container-id>
+```
+
+2. Run an **Ubuntu** container in interactive mode — explore it like a mini Linux machine
+```bash
+docker run -itd ubuntu
+```
+
+5. Run a command **inside** a running container
+```bash
+docker exec -it <container-id> bash
+```
+
+3. List all running containers
+```bash
+docker ps
+```
+
+4. List all containers (including stopped ones)
+```bash
+docker ps -a
+```
+
+5. Stop and remove a container
+```bash
+docker stop <container-id> && docker rm <container-id>
+```
