@@ -1,0 +1,8 @@
+# Base Image
+FROM ubuntu
+
+# Updates package lists and install `curl`
+RUN apt update && apt install curl -y
+
+# Prints the message using default command
+CMD ["echo", "Hello from my custom image!"]
