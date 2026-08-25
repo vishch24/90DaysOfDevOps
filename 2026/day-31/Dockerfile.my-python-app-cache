@@ -1,0 +1,8 @@
+FROM python:3.11-alpine
+WORKDIR /app
+
+# Inefficient order: Copying everything BEFORE installing dependencies
+COPY . .
+RUN pip install -r requirements.txt
+
+CMD ["python", "app.py"]
