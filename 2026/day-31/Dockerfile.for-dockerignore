@@ -1,0 +1,10 @@
+# Base Image
+FROM ubuntu
+
+WORKDIR /app
+
+# Copy EVERYTHING from the current local directory into /app
+COPY . .
+
+# When the container runs, list all files (including hidden ones)
+CMD ["ls", "-la"]
