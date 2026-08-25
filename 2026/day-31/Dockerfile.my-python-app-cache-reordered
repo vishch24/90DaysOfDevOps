@@ -1,0 +1,13 @@
+FROM python:3.11-alpine
+WORKDIR /app
+
+# 1. Copy ONLY the dependency file first
+COPY requirements.txt .
+
+# 2. Install dependencies
+RUN pip install -r requirements.txt
+
+# 3. Copy the rest of the source code (which changes frequently) LAST
+COPY . .
+
+CMD ["python", "app.py"]
